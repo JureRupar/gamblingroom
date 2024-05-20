@@ -50,13 +50,13 @@
             </table>
             </div>
                 <div id="kocke">
-                    <label for="stKock">Število kock:</label><br>
+                    <label for="stKock">Število kock:</label>
                     <select name="stKock" class="izb">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select><br>
-                    <label for="stMetov">Število metov:</label><br>
+                    <label for="stMetov">Število metov:</label>
                     <select name="stMetov" class="izb">
                         <option value="1">1</option>
                         <option value="2">2</option>

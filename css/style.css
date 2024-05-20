@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+body {
     background-image: url('../slike/ozadje.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgb(6, 6, 22);
 }
-#center{
+#center {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -20,17 +20,18 @@ body{
     background-color: rgb(31, 31, 138);
     border: 5px solid rgb(28, 2, 54);
     border-radius: 15px;
-    font-size: 45px;
+    font-size: 35px;
 }
-#igralci{
-    font-size: 45px;
+#igralec {
+    font-size: 35px;
     text-align: center;
     margin-bottom: 15px;
     overflow: hidden;
+    margin-top: 20px;
 }
-.igralci{
+.igralci {
     margin: 5px;
-    width: 150px;
+    width: 130px;
     padding: 20px 10px;
     display: inline-block;
     text-align: center;
@@ -38,16 +39,16 @@ body{
     margin-bottom: 15px;
     overflow: hidden;
 }
-#kocke{
-    margin-top: 25px;
-    font-size: 45px;
+#kocke {
+    margin-top: 90px;
+    line-height: 1.5;
 }
-.izb{
+.izb {
     text-align: center;
     width: 70px;
     border-radius: 5px;
 }
-h1{
+h1 {
     width: 1200px;
     position: fixed;
     font-size: 120px;
@@ -57,9 +58,9 @@ h1{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.spodi{
+.spodi {
     text-align: center;
-    font-size: 45px;
+    font-size: 35px;
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -67,14 +68,37 @@ h1{
     height: 100px;
     border-radius: 7px;
 }
-input, select{
+input, select {
     width: 164px;
     height: 30px;
     font-size: 25px;
-    color:rgb(28, 2, 54);
+    color: rgb(28, 2, 54);
 }
-.kocke{
-    border:3px solid black;
-    margin:0 1px;
-    border-radius:5px;
+.kocke {
+    border: 3px solid black;
+    margin: 0 1px;
+    border-radius: 5px;
+}
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+.main {
+    text-align: center;
+}
+table {
+    width: 100%;
+    margin: auto;
+}
+td {
+    width: 33%;
+}
+#td1, #td2, #td3 {
+    border: 1px solid #000;
+    padding: 10px;
 }
