@@ -1,18 +1,13 @@
 <?php
 session_start();
-
-// Retrieve scores and player names from session
 $p1 = $_SESSION["p1Score"];
 $p2 = $_SESSION["p2Score"];
 $p3 = $_SESSION["p3Score"];
-
-// Create an array with scores and names
 $a1 = array(
     array($p1, $p2, $p3),
     array($_SESSION["p1"], $_SESSION["p2"], $_SESSION["p3"])
 );
 
-// Sort the array based on scores in descending order
 array_multisort($a1[0], SORT_DESC, $a1[1]);
 ?>
 <!DOCTYPE html>
@@ -25,10 +20,13 @@ array_multisort($a1[0], SORT_DESC, $a1[1]);
     <link rel="icon" type="image/x-icon" href="img/gambling.png">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="jquery.fireworks.js"></script>
+    <script src="js/konec.js"></script>
 </head>
-<body onload="redirTimer()">
+<body>
     <div id="fireworks"></div>
-    <h1>ČESTITKE</h1>
+    <h1>ČESTITKE</h1><br>
+    <a id="cnt">Nazaj na začetek čez: 10</a>
+    <script src="js/redirect_timer.js"></script>
     <div id="center">
         <table>
             <tr>
@@ -56,30 +54,6 @@ array_multisort($a1[0], SORT_DESC, $a1[1]);
             </tr>
         </table>
     </div>
-    <h5 id="cnt">You can roll again in 10</h5>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const a = document.getElementById("cnt");
-            let i = 10;
-            setInterval(function() {
-                i--;
-                a.innerText = "You can roll again in " + i;
-                if (i === 0) {
-                    window.location.href = 'index.php';
-                }
-            }, 1000);
-
-            function checkWinnerAndFireworks() {
-                $('#fireworks').fireworks({
-                    sound: false,
-                    opacity: 0.9,
-                    width: '100%',
-                    height: '100%'
-                });
-            }
-
-            checkWinnerAndFireworks();
-        });
-    </script>
+    
 </body>
 </html>
